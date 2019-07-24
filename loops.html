@@ -8,17 +8,24 @@
 <body>
     <h1>Guessing Game</h1>
 
-    <script>
-/* STARTING CODE */
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * Math.floor(max - min)) + min;
-}
+	<script>
+		/* STARTING CODE */
+		function getRandomInt(min, max) {
+		    return Math.floor(Math.random() * Math.floor(max - min)) + min;
+		}
 
-var randomInt = getRandomInt(1, 100);
-/* END STARTING CODE */
-
-// your code goes under here
-
+		var randomInt = getRandomInt(1, 100);
+		/* END STARTING CODE */
+		var playing= true
+		while(playing){
+			var num =prompt("guess my number")
+			if(num>randomInt){alert("my number is smaller")}
+			else if(num<randomInt){alert("my numbe is greater")}
+			else{
+				alert("thats my number")
+				playing= false 
+			}
+		}
     </script>
 </body>
 
